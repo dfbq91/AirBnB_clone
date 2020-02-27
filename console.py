@@ -11,10 +11,12 @@ from models.state import State
 from models.user import User
 from models import storage
 from datetime import datetime
+listClass = ["BaseModel", "User", "Place",
+             "State", "City", "Amenity", "Review"]
 
 
 class HBNBCommand(cmd.Cmd):
-    ''' Console '''
+    '''A command interpreter to manage AirBnB objects'''
 
     prompt = '(hbnb) '
 
@@ -32,13 +34,13 @@ class HBNBCommand(cmd.Cmd):
         return ""
 
     def do_create(self, line):
-        '''Create commands'''
+        '''Creates a new instance of BaseModel, saves it (to the JSON
+        file) and prints the id. Ex: $ create BaseModel'''
+
         if not line:
             print("** class name missing **")
             return
 
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
         data = shlex.split(line)
         nameClass = data[0]
 
@@ -50,13 +52,13 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, line):
-        '''show commands'''
+        '''Prints the string representation of an instance based on the
+        class name and id. Ex: $ show BaseModel 1234-1234-1234.'''
+
         if not line:
             print("** class name missing **")
             return
 
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
         data = line.split(" ")
         nameClass = data[0]
 
@@ -69,19 +71,19 @@ class HBNBCommand(cmd.Cmd):
                 idObject = "{}.{}".format(data[0], data[1])
                 dictObj = storage.all()
                 print(dictObj[idObject])
-            except:
+            except Exception:
                 print("** no instance found **")
         else:
             print("** class doesn't exist **")
 
     def do_destroy(self, line):
-        '''destroy command'''
+        '''Deletes an instance based on the class name and id (save the
+        change into the JSON file). Ex: $ destroy BaseModel 1234-1234-1234'''
+
         if not line:
             print("** class name missing **")
             return
 
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
         data = line.split(" ")
         nameClass = data[0]
 
@@ -101,10 +103,11 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_all(self, line):
-        '''all command'''
+        '''Prints all string representation of all instances based or not
+        on the class name. Ex: $ all BaseModel or $ all'''
+
         dictObj = storage.all()
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
+
         if not line:
             newList = []
             for value in dictObj.values():
@@ -125,13 +128,14 @@ class HBNBCommand(cmd.Cmd):
                 print(newList)
 
     def do_update(self, line):
-        '''update command'''
+        '''Updates an instance based on the class name and id by adding or
+        updating attribute (save the change into the JSON file).
+        Ex: $ update BaseModel 1234-1234-1234 email "aibnb@holberton.com"'''
+
         if not line:
             print("** class name missing **")
             return
 
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
         data = shlex.split(line)
         dictObj = storage.all()
 
@@ -144,7 +148,7 @@ class HBNBCommand(cmd.Cmd):
 
         try:
             obj = dictObj["{}.{}".format(data[0], data[1])]
-        except:
+        except Exception:
             print("** no instance found **")
             return
 
@@ -159,13 +163,13 @@ class HBNBCommand(cmd.Cmd):
         obj.save()
 
     def do_count(self, line):
-        '''count command'''
+        '''retrieve the number of instances of a
+        class: <class name>.count()'''
+
         if not line:
             print("** class name missing **")
             return
 
-        listClass = ["BaseModel", "User", "Place", "State", "City", "Amenity",
-                     "Review"]
         if line in listClass:
             objcDic = storage.all()
             count = 0
@@ -177,7 +181,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def default(self, line):
-        '''others commands'''
+        '''others commands. This method is for retrieve the
+        number of instances of a class: <class name>.count()'''
+
         data = line.split(".")
         if len(data) < 2:
             return
