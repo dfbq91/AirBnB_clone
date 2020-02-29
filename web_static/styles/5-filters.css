@@ -25,20 +25,15 @@
   opacity: 0.9;
 }
 
-.locations {
+.locations, .amenities {
   height: 100%;
   width: 25%;
-  border-right: #DDDDDD 1px solid;
   padding: 0 45px 0 45px;
   display: inline-block;
 }
 
-.amenities {
-  height: 100%;
-  width: 25%;
-  border-right: #DDDDDD 1px;
-  padding-left: 45px;
-  display: inline-block;
+.locations {
+  border-right: #DDDDDD 1px solid;
 }
 
 .locations h3, .amenities h3 {
