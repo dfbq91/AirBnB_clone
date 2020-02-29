@@ -1,0 +1,33 @@
+/*places style*/
+.places {
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  max-width: 98%;
+}
+
+.places h1 {
+  text-align: left;
+}
+
+.places article {
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: #FF5A5F solid 1px;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+
+}
+
+.places article .name{
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 0px;
+
+}
+
+
+
