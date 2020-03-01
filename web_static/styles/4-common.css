@@ -10,7 +10,8 @@ body {
 .container {
   max-width: 1000px;
   /*margin-top and bottom at 30px and centered horizontally*/
-  margin: 30px auto; 
+  margin: 30px auto;
+  padding-bottom: 50px;
 
 }
 
