@@ -1,9 +1,10 @@
 /*places style*/
 .places {
+  display: inline-table;
+  position: relative;
   font-size: 30px;
-  margin: auto;
-  text-align: center;
   max-width: 98%;
+  text-align: center;
 }
 
 .places h1 {
@@ -11,18 +12,20 @@
 }
 
 .places article {
+  display: inline-table;
+  position: relative;
   width: 390px;
   padding: 20px;
   margin: 20px;
   border: #FF5A5F solid 1px;
   border-radius: 4px;
-  position: relative;
-  display: inline-block;
 
+  
 }
 
 .places article .name{
   font-size: 30px;
+  position: relative;
   text-align: center;
   font-weight: 900;
   margin-top: 0px;
@@ -30,13 +33,18 @@
 }
 
 .price_by_night {
+  position: absolute;
   color: #FF5A5F;
   border: #FF5A5F 4px solid;
-  border-radius: 450%;
+  border-radius: 50%;
   min-width: 60px;
+  width: 75px;
   height: 60px;
   font-size: 30px;
-  float: right;
+  right: 5%; /*0% will send element all of the right*/ 
+  display: block;
+  margin-top: -15px;
+  line-height: 60px; /*To center text inside a div, line-height must be equal to height*/
 
 }
 
@@ -45,20 +53,41 @@
   border-top: #DDDDDD 1px solid;
   border-bottom: #DDDDDD 1px solid;
   text-align: center;
+}
 
+.max_guest {
+  background: url("/images/icon_group.png") no-repeat;
+}
+
+.number_rooms {
+  background: url("/images/icon_bed.png") no-repeat;
+}
+
+.number_bathrooms {
+  background: url("/images/icon_bath.png") no-repeat;
 }
 
 .max_guest, .number_rooms, .number_bathrooms {
-  width: 100px;
+  background-position: top;
   display: inline-block;
+  width: 100px;
+  height: 80px;
+  text-align: center;
   font-size: 16px;
-  background: url("images/icon_bed.png") no-repeat;
+  margin-top: 3px;
+}
+
+.max_guest p, .number_rooms p, .number_bathrooms p {
+  position: relative;
+  padding-top: 37px;
+  display: inline-block;
+  font-size: 14px;
 }
 
 .user {
   font-size: 14px;
   margin-bottom: 10px;
-  margin-top: 25px;
+  margin-top: 20px;
   text-align: left;
 }
 
