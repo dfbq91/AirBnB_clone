@@ -1,0 +1,28 @@
+/*global style*/
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  }
+
+.container {
+  max-width: 1000px;
+  /*margin-top and bottom at 30px and centered horizontally*/
+  margin: 30px auto;
+  padding-bottom: 50px;
+
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 1060px) {
+main, body, html {
+  width: 100%;
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+main, body, html {
+  width: 100%;
+}
