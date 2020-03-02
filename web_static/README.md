@@ -69,6 +69,12 @@
 ### [12. Accessibility](./103-index.html)
 * Improve the page by adding Accessibility support
 
+## Bugs
+
+* "102" files are for responsive implementation, but this need to be improved.
+* In subsequent 8-index files, the size of the article tag (i.e., each location) on the underside should be equal to the size of the adjacent side. This is not yet implemented.
+* The css of amenities must be changed to make each feature of the place modular, because the code was made so that wifi, pet friendly and television are always present.
+
 ---
 
 ## Author
