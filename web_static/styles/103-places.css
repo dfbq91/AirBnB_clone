@@ -1,0 +1,153 @@
+/*places style*/
+.places {
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  max-width: 98%;
+  height: auto;
+}
+
+.places h1 {
+  text-align: left;
+}
+
+.places article {
+  position: relative;
+  height: 100%;
+  width: 390px;
+  padding: 20px;
+  margin: 20px;
+  border: #FF5A5F solid 1px;
+  border-radius: 4px;
+  display: inline-table;
+}
+
+.places article .name{
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 0px;
+}
+
+.price_by_night {
+  position: absolute;
+  color: #FF5A5F;
+  border: #FF5A5F 4px solid;
+  border-radius: 50%;
+  min-width: 60px;
+  width: 75px;
+  height: 60px;
+  font-size: 30px;
+  right: 5%; /*0% will send element all of the right*/ 
+  display: block;
+  margin-top: -15px;
+  line-height: 60px; /*To center text inside a div, line-height must be equal to height*/
+}
+
+.information {
+  height: 80px;
+  border-top: #DDDDDD 1px solid;
+  border-bottom: #DDDDDD 1px solid;
+  text-align: center;
+}
+
+.max_guest {
+  background: url("/images/icon_group.png") no-repeat;
+}
+
+.number_rooms {
+  background: url("/images/icon_bed.png") no-repeat;
+}
+
+.number_bathrooms {
+  background: url("/images/icon_bath.png") no-repeat;
+}
+
+.max_guest, .number_rooms, .number_bathrooms {
+  background-position: top;
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.max_guest p, .number_rooms p, .number_bathrooms p {
+  position: relative;
+  padding-top: 37px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.user {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.description {
+  font-size: 14px;
+  text-align: left;
+}
+
+.Amenities {
+  margin-top: 40px;
+  background: url("/images/icon_tv.png") no-repeat, url("/images/icon_wifi.png") no-repeat, url("/images/icon_pets.png") no-repeat;
+  background-size: 20px, 20px, 20px;
+  background-position-y: 37px, 67px, 97px;
+
+}
+
+.Amenities p, .Amenities li {
+  margin: 10px auto;
+  font-size: 14px;
+  list-style: none;
+  text-align: left;
+}
+
+.Amenities ul {
+  padding-left: 25px;
+  font-size: 14px;
+  list-style: none;
+  text-align: left;
+}
+
+.Reviews {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.Amenities h2, .Reviews h2 {
+  font-size: 16px;
+  border-bottom: #DDDDDD 1px solid;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.Reviews ul p {
+  text-align: left;
+  list-style: none;
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: -15px;
+}
+
+.Reviews ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.Reviews ul li {
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+  margin: 0px 0px 0px -40px;
+  padding: 0px;
+}
+
+
